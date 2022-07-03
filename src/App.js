@@ -3,6 +3,7 @@ import Services from "./sections/services";
 import Welcome from "./sections/welcome";
 import Projects from "./sections/projects";
 import Footer from "./components/footer";
+import Contacts from "./sections/contacts";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
           <Welcome/>
           <Services/>
           <Projects/>
+          <Contacts/>
           <Footer/>
       </div>
   );
