@@ -2,10 +2,10 @@ import './services.css';
 
 function Services() {
     return (
-        <div id="services" className="bg-white">
+        <div className="bg-white">
             <div className="container p-3">
                 <div className="row">
-                    <h2 className="text-center text-uppercase">Услуги</h2>
+                    <h2 id="services" className="text-center text-uppercase">Услуги</h2>
                 </div>
                 <div className="row">
                     <ServiceCard
