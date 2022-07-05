@@ -61,6 +61,7 @@ function ServiceCard(props) {
                     <h5 className="card-title">{props.title}</h5>
                     <p className="card-text">{props.desc}</p>
                 </div>
+                <button className="btn btn-primary w-100">Посмотреть цены</button>
             </div>
         </div>
     );
