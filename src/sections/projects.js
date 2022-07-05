@@ -18,6 +18,42 @@ const ALL_PROJECTS = [
                 description: "Kek"
             }
         ]
+    },
+    {
+        name: "Project 1",
+        image: "https://via.placeholder.com/640x380",
+        description: "Some project",
+        dark: true,
+        items: [
+            {
+                image: "https://via.placeholder.com/640x380",
+                title: "Slide 1",
+                description: "Hello"
+            },
+            {
+                image: "https://via.placeholder.com/640x380",
+                title: "Slide 2",
+                description: "Kek"
+            }
+        ]
+    },
+    {
+        name: "Project 1",
+        image: "https://via.placeholder.com/640x380",
+        description: "Some project",
+        dark: true,
+        items: [
+            {
+                image: "https://via.placeholder.com/640x380",
+                title: "Slide 1",
+                description: "Hello"
+            },
+            {
+                image: "https://via.placeholder.com/640x380",
+                title: "Slide 2",
+                description: "Kek"
+            }
+        ]
     }
 ]
 
