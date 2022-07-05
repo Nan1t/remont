@@ -1,5 +1,3 @@
-import './services.css';
-
 function Services() {
     return (
         <div className="bg-white">
