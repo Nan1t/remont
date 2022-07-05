@@ -1,5 +1,3 @@
-import './projects.css';
-
 const ALL_PROJECTS = [
     {
         name: "Project 1",
