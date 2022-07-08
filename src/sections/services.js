@@ -11,26 +11,24 @@ function Services() {
                 id={`service-` + i}
                 image={service.image}
                 title={service.title}
-                desc={service.description}
+                desc={service.desk}
                 priceList={service.priceList}
             />
         );
     }
 
     return (
-        <div className="bg-light">
-            <div className="container p-3">
-                <div className="row">
-                    <h2 id="services" className="text-center text-uppercase">Услуги</h2>
-                    <hr className="w-15 m-auto bg-dark mb-3"/>
-                    <p className="text-center">
-                        <i className="bi bi-info-circle me-3"></i>
-                        Представленные здесь цены могут отличаться от актуальных
-                    </p>
-                </div>
-                <div className="row">
-                    {services}
-                </div>
+        <div className="container p-3">
+            <div className="row">
+                <h2 id="services" className="text-center text-uppercase">Услуги</h2>
+                <div className="divider m-auto mb-3"></div>
+                <p className="text-center">
+                    <i className="bi bi-info-circle me-3"></i>
+                    Представленные здесь цены могут отличаться от актуальных
+                </p>
+            </div>
+            <div className="row">
+                {services}
             </div>
         </div>
     );
@@ -41,11 +39,11 @@ function ServiceCard(props) {
 
     return (
         <div className="col-12 col-md-6 col-lg-4 p-3">
-            <div className="card p-4 border-0 shadow">
+            <div className="card p-4 border-0 bg-transparent">
                 <img src={props.image} className="card-img-top align-self-center w-25" alt="..."/>
                 <div className="card-body text-center">
-                    <h5 className="card-title">{props.title}</h5>
-                    <p className="card-text">{props.desc}</p>
+                    <h5 className="card-title mb-4">{props.title}</h5>
+                    <p>{props.priceList.length}+ видов работ</p>
                     <button className="btn btn-dark" data-bs-toggle="modal" data-bs-target={`#` + modalId}>
                         Посмотреть цены
                     </button>

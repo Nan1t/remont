@@ -17,19 +17,17 @@ function Projects() {
     }
 
     return (
-        <div className="bg-light">
-            <div className="container p-3">
-                <div className="row">
-                    <h2 id="projects" className="text-center text-uppercase">Примеры проектов</h2>
-                    <hr className="w-15 m-auto bg-dark mb-3"/>
-                    <p className="text-center">
-                        <i className="bi bi-info-circle me-3"></i>
-                        Здесь представлены только те проекты, показ которых был одобрен заказчиком
-                    </p>
-                </div>
-                <div className="row">
-                    {projects}
-                </div>
+        <div className="container p-3">
+            <div className="row">
+                <h2 id="projects" className="text-center text-uppercase">Примеры проектов</h2>
+                <div className="divider m-auto mb-3"></div>
+                <p className="text-center">
+                    <i className="bi bi-info-circle me-3"></i>
+                    Здесь представлены только те проекты, показ которых был одобрен заказчиком
+                </p>
+            </div>
+            <div className="row">
+                {projects}
             </div>
         </div>
     );

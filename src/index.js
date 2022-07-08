@@ -24,7 +24,7 @@ root.render(
 
 function App() {
     return (
-        <div>
+        <div className="bg-light">
             <Navbar/>
             <Welcome/>
             <Services/>

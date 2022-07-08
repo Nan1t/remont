@@ -18,8 +18,10 @@
     max-height: 50vh !important;
 }
 
-hr {
-    height: 4px !important;
+.divider {
+    height: 3px;
+    width: 5em;
+    background-color: #363636;
 }
 
 .carousel-inner img {

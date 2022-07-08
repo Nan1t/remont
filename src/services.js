@@ -1,7 +1,6 @@
 export const ALL_SERVICES = [
     {
         title: "Сантехнические работы",
-        description: "Описание",
         image: "/img/services/pipe.png",
         priceList: [
             { name: "Штробление под трубы в бетоне, глубина штробы 5 см", price: "200/м.пог."},
@@ -59,7 +58,6 @@ export const ALL_SERVICES = [
     },
     {
         title: "Электромонтажные работы",
-        description: "Описание",
         image: "/img/services/idea.png",
         priceList: [
             { name: "Штробление под проводку в бетоне, глубина штробы 2 см", price: "100/м.пог."},
@@ -123,7 +121,6 @@ export const ALL_SERVICES = [
     },
     {
         title: "Плиточные работы",
-        description: "Описание",
         image: "/img/services/tile.png",
         priceList: [
             { name: "Грунтовка стяжки под плитку, м²", price: "15"},
@@ -159,7 +156,6 @@ export const ALL_SERVICES = [
     },
     {
         title: "Фасадные работы",
-        description: "Описание",
         image: "/img/services/house.png",
         priceList: [
             { name: "Грунтовка поверхности фасада, м²", price: "20"},
@@ -182,7 +178,6 @@ export const ALL_SERVICES = [
     },
     {
         title: "Монтаж гипсокартона",
-        description: "Описание",
         image: "/img/services/brick-wall.png",
         priceList: [
             { name: "Монтаж гипсокартона на стену, м²", price: "160"},
@@ -206,7 +201,6 @@ export const ALL_SERVICES = [
     },
     {
         title: "Отделочные работы",
-        description: "Описание",
         image: "/img/services/paint-roller.png",
         priceList: [
             { name: "Грунтовка под стяжку, м²", price: "15"},

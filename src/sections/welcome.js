@@ -1,8 +1,5 @@
 import './welcome.css';
 
-const LINK_FACEBOOK = "https://facebook.com";
-const LINK_TELEGRAM = "https://facebook.com";
-
 function Welcome() {
     return (
         <div id="welcome" className="shadow">
@@ -16,10 +13,11 @@ function Welcome() {
                     <div className="row">
                         <div className="col-md-6 offset-md-3">
                             <p className="fs-4 fw-light text-light">
-                                Капитальный и косметический ремонт помещений по индивидуальному заказу.
+                                Капитальный и косметический ремонт помещений по индивидуальному заказу в городе Запорожье
                             </p>
-                            <SocialLink link={LINK_TELEGRAM} icon="fa-telegram" text="Telegram" />
-                            <SocialLink link={LINK_TELEGRAM} icon="fa-viber" text="Viber" />
+                            <a href="#services" className="btn btn-lg btn-outline-light text-uppercase border-3 fw-bold">
+                                Посмотреть услуги и цены
+                            </a>
                         </div>
                     </div>
                 </div>

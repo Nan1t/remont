@@ -4,7 +4,7 @@ function Navbar() {
     return (
         <nav id="navbar-main" className="navbar navbar-expand-lg position-fixed w-100 p-2 navbar-dark bg-dark shadow">
             <div className="container">
-                <a className="navbar-brand fs-3 text-uppercase fw-bold" href="/">
+                <a className="navbar-brand text-uppercase fw-bold" href="/">
                     <i className="bi bi-house-fill me-2"></i>
                     Ремонт квартир
                 </a>
@@ -52,7 +52,7 @@ function PhoneButton() {
     return (
         <a className="btn btn-outline-light p-2 ps-4 pe-4" href={`tel:` + phone}>
             <i className="bi bi-telephone-fill me-1"></i>
-            <span>+380 (68) 980 21 47</span>
+            <span>+380 (68) 980 2147</span>
         </a>
     );
 }
