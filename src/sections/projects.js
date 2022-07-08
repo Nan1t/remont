@@ -1,4 +1,5 @@
-import {ALL_PROJECTS} from "../projects";
+import { ALL_PROJECTS } from "../projects";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Projects() {
     let projects = [];
@@ -40,7 +41,12 @@ function Project(props) {
         <div className="col-12 col-md-6 col-lg-4 col-xl-3 p-3">
             <button className="mh-50 text-decoration-none border-0 p-0 shadow-sm" data-bs-toggle="modal" data-bs-target={`#` + modalId}>
                 <div className="card border-0 bg-dark text-white">
-                    <img src={props.image} className="card-img" alt="Alt" />
+                    {/*<img src={props.image} className="card-img" alt="Alt" />*/}
+                    <LazyLoadImage
+                        src={props.image}
+                        className="card-img"
+                        alt="Alt"
+                    />
                 </div>
             </button>
             <ProjectCarousel id={modalId} items={props.items} />
@@ -67,6 +73,7 @@ function ProjectCarousel(props) {
 
         indicators.push(
             <button
+                key={i}
                 type="button"
                 data-bs-target={`#` + carouselId}
                 data-bs-slide-to={i}
@@ -108,7 +115,12 @@ function ProjectCarousel(props) {
 function CarouselItem(props) {
     return (
         <div className={`carousel-item ` + (props.active === true ? 'active' : '')}>
-            <img src={props.image} className="d-block mh-75" alt="Alt" />
+            <LazyLoadImage
+                src={props.image}
+                className="d-block mh-75"
+                alt="Alt"
+            />
+            {/*<img src={props.image} className="d-block mh-75" alt="Alt" />*/}
             <div className="carousel-caption d-none d-md-block">
                 <h5>{props.title}</h5>
                 <p>{props.description}</p>
