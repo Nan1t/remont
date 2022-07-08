@@ -47,12 +47,12 @@ function Navbar() {
 }
 
 function PhoneButton() {
-    let phone = "+7777777777";
+    let phone = "+380689802147";
 
     return (
         <a className="btn btn-outline-light p-2 ps-4 pe-4" href={`tel:` + phone}>
             <i className="bi bi-telephone-fill me-1"></i>
-            <span>{phone}</span>
+            <span>+380 (68) 980 21 47</span>
         </a>
     );
 }

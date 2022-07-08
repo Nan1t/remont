@@ -7,9 +7,14 @@ function Contacts() {
             </div>
             <div className="row">
                 <h4>График работы</h4>
-                <p></p>
+                <p>
+                    Работаем с 8:00 до 17:00.
+                </p>
+                <p>
+                    Звонки принимаются с 8:00 до 20:00
+                </p>
             </div>
-            <div className="row">
+            <div className="row d-flex flex-column justify-content-center">
                 <h4>Способы связи</h4>
                 <p>
                     <a href="tel:+380937906613" className="btn text-decoration-none">
@@ -26,7 +31,7 @@ function Contacts() {
                 <p>
                     <a href="mailto:dude@gmail.com" className="btn text-decoration-none">
                         <i className="bi bi-envelope-fill me-2"></i>
-                        <span>dude@gmail.com</span>
+                        <span>den0076@gmail.com</span>
                     </a>
                 </p>
             </div>

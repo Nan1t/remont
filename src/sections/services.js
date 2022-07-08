@@ -22,7 +22,11 @@ function Services() {
             <div className="container p-3">
                 <div className="row">
                     <h2 id="services" className="text-center text-uppercase">Услуги</h2>
-                    <hr className="w-15 m-auto bg-dark"/>
+                    <hr className="w-15 m-auto bg-dark mb-3"/>
+                    <p className="text-center">
+                        <i className="bi bi-info-circle me-3"></i>
+                        Представленные здесь цены могут отличаться от актуальных
+                    </p>
                 </div>
                 <div className="row">
                     {services}
@@ -36,7 +40,7 @@ function ServiceCard(props) {
     let modalId = props.id + "-modal";
 
     return (
-        <div className="col-12 col-md-6 col-lg-4 col-xl-3 p-3">
+        <div className="col-12 col-md-6 col-lg-4 p-3">
             <div className="card p-4 border-0 shadow">
                 <img src={props.image} className="card-img-top align-self-center w-25" alt="..."/>
                 <div className="card-body text-center">
@@ -80,7 +84,7 @@ function PriceList(props) {
                             <thead className="table-dark">
                             <tr>
                                 <th scope="col">Вид работ</th>
-                                <th scope="col">Цена</th>
+                                <th scope="col">Цена, грн</th>
                             </tr>
                             </thead>
                             <tbody>
