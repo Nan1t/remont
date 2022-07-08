@@ -40,8 +40,8 @@ function Project(props) {
 
     return (
         <div className="col-12 col-md-6 col-lg-4 col-xl-3 p-3">
-            <button className="mh-50 text-decoration-none border-0 p-0" data-bs-toggle="modal" data-bs-target={`#` + modalId}>
-                <div className="card border-0 shadow-sm bg-dark text-white">
+            <button className="mh-50 text-decoration-none border-0 p-0 shadow-sm" data-bs-toggle="modal" data-bs-target={`#` + modalId}>
+                <div className="card border-0 bg-dark text-white">
                     <img src={props.image} className="card-img" alt="Alt" />
                 </div>
             </button>
