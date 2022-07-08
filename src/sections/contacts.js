@@ -3,6 +3,7 @@ function Contacts() {
         <div className="container p-3">
             <div className="row">
                 <h2 id="contacts" className="text-center text-uppercase">Контакты</h2>
+                <hr className="w-15 m-auto bg-dark"/>
             </div>
             <div className="row">
                 <h4>График работы</h4>

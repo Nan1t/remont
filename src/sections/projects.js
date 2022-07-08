@@ -1,59 +1,4 @@
-const ALL_PROJECTS = [
-    {
-        name: "Project 1",
-        image: "https://via.placeholder.com/640x380",
-        description: "Some project",
-        dark: true,
-        items: [
-            {
-                image: "https://via.placeholder.com/640x380",
-                title: "Slide 1",
-                description: "Hello"
-            },
-            {
-                image: "https://via.placeholder.com/640x380",
-                title: "Slide 2",
-                description: "Kek"
-            }
-        ]
-    },
-    {
-        name: "Project 1",
-        image: "https://via.placeholder.com/640x380",
-        description: "Some project",
-        dark: true,
-        items: [
-            {
-                image: "https://via.placeholder.com/640x380",
-                title: "Slide 1",
-                description: "Hello"
-            },
-            {
-                image: "https://via.placeholder.com/640x380",
-                title: "Slide 2",
-                description: "Kek"
-            }
-        ]
-    },
-    {
-        name: "Project 1",
-        image: "https://via.placeholder.com/640x380",
-        description: "Some project",
-        dark: true,
-        items: [
-            {
-                image: "https://via.placeholder.com/640x380",
-                title: "Slide 1",
-                description: "Hello"
-            },
-            {
-                image: "https://via.placeholder.com/640x380",
-                title: "Slide 2",
-                description: "Kek"
-            }
-        ]
-    }
-]
+import {ALL_PROJECTS} from "../projects";
 
 function Projects() {
     let projects = [];
@@ -65,10 +10,7 @@ function Projects() {
             <Project
                 key={i}
                 id={`project-` + i}
-                dark={project.dark}
-                title={project.name}
                 image={project.image}
-                description={project.description}
                 items={project.items}
             />
         );
@@ -79,6 +21,7 @@ function Projects() {
             <div className="container p-3">
                 <div className="row">
                     <h2 id="projects" className="text-center text-uppercase">Примеры проектов</h2>
+                    <hr className="w-15 m-auto bg-dark mb-3"/>
                     <p className="text-center">
                         <i className="bi bi-info-circle me-3"></i>
                         Здесь представлены только те проекты, показ которых был одобрен заказчиком
@@ -96,14 +39,10 @@ function Project(props) {
     let modalId = props.id + '-modal';
 
     return (
-        <div className="col-12 col-md-6 col-lg-4 p-3">
-            <button className="text-decoration-none border-0 p-0" data-bs-toggle="modal" data-bs-target={`#` + modalId}>
-                <div className={`card border-0 shadow-sm` + (props.dark === true ? 'bg-dark text-white' : 'bg-light text-dark')}>
-                    <img src={props.image} className="card-img" alt={props.title} />
-                    <div className="card-img-overlay d-flex flex-column justify-content-center align-items-center">
-                        <h4 className="card-title align-self-center fw-bold">{props.title}</h4>
-                        <p className="card-text">{props.description}</p>
-                    </div>
+        <div className="col-12 col-md-6 col-lg-4 col-xl-3 p-3">
+            <button className="mh-50 text-decoration-none border-0 p-0" data-bs-toggle="modal" data-bs-target={`#` + modalId}>
+                <div className="card border-0 shadow-sm bg-dark text-white">
+                    <img src={props.image} className="card-img" alt="Alt" />
                 </div>
             </button>
             <ProjectCarousel id={modalId} items={props.items} />
@@ -111,31 +50,44 @@ function Project(props) {
     );
 }
 
-
 function ProjectCarousel(props) {
     let carouselId = props.id + '-carousel';
     let items = [];
+    let indicators = [];
 
     for (let i in props.items) {
-        let item = props.items[i];
+        let item = props.items[i]
+        let active = parseInt(i) === 0;
 
         items.push(
             <CarouselItem
                 key={i}
-                active={parseInt(i) === 0}
-                image={item.image}
-                title={item.title}
-                description={item.description}
+                active={active}
+                image={item}
             />
+        );
+
+        indicators.push(
+            <button
+                type="button"
+                data-bs-target={`#` + carouselId}
+                data-bs-slide-to={i}
+                className={active ? 'active' : ''}
+                aria-current={active}
+                aria-label={`Slide ` + i}
+            ></button>
         );
     }
 
     return (
         <div className="modal fade" id={props.id} tabIndex="-1" aria-hidden="true">
             <div className="modal-dialog modal-lg modal-dialog-centered">
-                <div className="modal-content bg-transparent">
+                <div className="modal-content bg-dark border-0">
                     <div className="modal-body p-0">
                         <div id={carouselId} className="carousel slide" data-bs-ride="carousel">
+                            <div className="carousel-indicators">
+                                {indicators}
+                            </div>
                             <div className="carousel-inner">
                                 {items}
                             </div>
@@ -158,7 +110,7 @@ function ProjectCarousel(props) {
 function CarouselItem(props) {
     return (
         <div className={`carousel-item ` + (props.active === true ? 'active' : '')}>
-            <img src={props.image} className="d-block w-100" alt="Alt" />
+            <img src={props.image} className="d-block mh-75" alt="Alt" />
             <div className="carousel-caption d-none d-md-block">
                 <h5>{props.title}</h5>
                 <p>{props.description}</p>

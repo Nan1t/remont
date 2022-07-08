@@ -19,7 +19,7 @@ function Navbar() {
                 >
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
                         <a href="#services" className="nav-link">
                             <i className="bi bi-info-square-fill me-2"></i>
@@ -34,13 +34,13 @@ function Navbar() {
                             <span>Контакты</span>
                         </a>
                     </div>
-                    {/*<div className="justify-content-end d-block d-lg-none">*/}
-                    {/*    <PhoneButton/>*/}
-                    {/*</div>*/}
+                    <div className="justify-content-end d-block d-lg-none">
+                        <PhoneButton/>
+                    </div>
                 </div>
-                {/*<div className="justify-content-end d-none d-lg-block">*/}
-                {/*    <PhoneButton/>*/}
-                {/*</div>*/}
+                <div className="justify-content-end d-none d-lg-block">
+                    <PhoneButton/>
+                </div>
             </div>
         </nav>
     );
@@ -52,7 +52,7 @@ function PhoneButton() {
     return (
         <a className="btn btn-outline-light p-2 ps-4 pe-4" href={`tel:` + phone}>
             <i className="bi bi-telephone-fill me-1"></i>
-            <span>Тел. {phone}</span>
+            <span>{phone}</span>
         </a>
     );
 }
