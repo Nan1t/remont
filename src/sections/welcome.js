@@ -3,7 +3,7 @@ import './welcome.css';
 function Welcome() {
     return (
         <div id="welcome" className="shadow">
-            <div className="mask d-flex flex-column align-items-center justify-content-center">
+            <div className="mask d-flex flex-column align-items-center justify-content-center position-relative">
                 <div className="container text-center">
                     <div className="row">
                         <h1 className="text-uppercase text-light">
@@ -21,17 +21,12 @@ function Welcome() {
                         </div>
                     </div>
                 </div>
+                <div className="position-absolute bottom-0 text-light fw-bolder p-4">
+                    <i className="bi bi-geo-alt-fill me-2"></i>
+                    <span>Запорожье, Украина</span>
+                </div>
             </div>
         </div>
-    );
-}
-
-function SocialLink(props) {
-    return (
-        <a href={props.link} rel="noreferrer" target="_blank" className="btn btn-light w-auto me-3">
-            <i className={`me-2 fa fa-brands ` + props.icon}></i>
-            {props.text}
-        </a>
     );
 }
 
