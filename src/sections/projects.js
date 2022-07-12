@@ -24,7 +24,7 @@ function Projects() {
                 <div className="divider m-auto mb-3"></div>
                 <p className="text-center">
                     <i className="bi bi-info-circle me-3"></i>
-                    Здесь представлены только те проекты, показ которых был одобрен заказчиком
+                    Здесь представлена только часть проектов
                 </p>
             </div>
             <div className="row">
